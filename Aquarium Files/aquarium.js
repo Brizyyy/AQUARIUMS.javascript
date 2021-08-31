@@ -45,7 +45,7 @@ https://www.w3schools.com/jsref/jsref_isNaN.asp
 */
 
 function surfaceArea() {
-	var surfaceArea = (2*1*h + 2*w*h + w*1);
+	var surfaceArea = (2*l*h + 2*w*h + w*l);
 	return surfaceArea;
 }; 
 
@@ -83,20 +83,21 @@ You can use the URL below to help you do this:
 https://www.w3schools.com/jsref/jsref_tofixed.asp
 */
 
-function finalCost() {
-	if (height_element < 25) {
-	var glass = 10;  
-		
-} else  
-    var glass = 6; 
-    
-	var num =
-	var n = num.toFixed(2); 
-	
-	var glue = 10;
+function finalCost  () {
+	var glass;
+	var glue = 10; 
+	if (height < 25) {
+  glass = 6;
+} 
+else {
+  glass = 10;
+}
 
-    var labour = ???
-}; 
+};
+var surfaceArea = sufaceArea (); {
+	var num = surfaceArea;
+    var n = num.toFixed(2);
+}
 
 /*
 Create a function named resetInputs to reset the inputs (Length, Width, Height).
