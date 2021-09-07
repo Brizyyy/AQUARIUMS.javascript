@@ -115,17 +115,13 @@ function finalCost  () {
 		thickness = "4mm";
       }; 
 
-	// glue 
-	var glueCost = calcGlueCost(depth, width, height) * glue;
+	var glueCost = calGlueCost(depth, width, height) * glue;
 
-	// labour 
 	var labourCost = surface / labour;
 
-	// subtotal
 	var subtotal = surfaceCost + glueCost + labourCost;
 	
-	// Calculate total cost
-		var total = (subtotal * gst).toFixed(2);
+	var total = (subtotal * gst).toFixed(2);
 
 }; 
 
