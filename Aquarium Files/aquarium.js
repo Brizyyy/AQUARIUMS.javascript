@@ -55,9 +55,9 @@ function TotalSurfaceArea() {
 	return total;
 	};
 if (isNaN(l) || isNaN(w) || isNaN(h)) {
-		alert("Invalid entry. Please enter a number!")
+		alert("Access Denied :(. Please try again!")
 	} else {
-		return ((2*(h*l))+(2*(w*l))+(2*(w*h)));
+		return ((2*(h*l))+(2*(w*l))+(2*(w*h));
 }
 
 function calcGlueCost(d, w, h) {
