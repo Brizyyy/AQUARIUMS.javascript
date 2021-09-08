@@ -27,8 +27,8 @@ https://www.w3schools.com/js/js_htmldom_document.asp
 https://www.w3schools.com/jsref/event_onclick.asp
 */
 
-document.getElementById("btnReset").onclick = reset_cost();
-document.getElementById("btnCalcCost").onclick = TotalSurfaceArea();
+document.getElementById("btnReset").onclick = reset();
+document.getElementById("btnCalcCost").onclick = CalCost();
 
 /*
 Create a function that calculates the surface area.
