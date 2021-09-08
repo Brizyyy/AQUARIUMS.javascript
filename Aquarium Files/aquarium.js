@@ -4,9 +4,9 @@ The following URL will help you to do this:
 https://www.javascript-coder.com/javascript-form/getelementbyid-form/
 */
 
-var length = document.getElementById('txtLength').value; 
-var width = document.getElementById('txtWidth').value; 
-var height = document.getElementById('txtHeight').value; 
+var length = document.getElementById('txtLength'); 
+var width = document.getElementById('txtWidth'); 
+var height = document.getElementById('txtHeight'); 
 
 /*
 Also store the tdCost id element as a variable.
@@ -14,8 +14,7 @@ The following link will help you to do this:
 https://www.w3schools.com/jsref/met_document_getelementbyid.asp
 */
 
-var form = document.getElementById("inputs");
-var output = document.getElementById("tdCost");
+var price = document.getElementById('tdCost);
 
 /*
 select the "Calculate Cost" and "Reset" buttons by
@@ -28,8 +27,8 @@ https://www.w3schools.com/js/js_htmldom_document.asp
 https://www.w3schools.com/jsref/event_onclick.asp
 */
 
-var btnCalcCost = document.getElementById("btnCalcCost");
-var btnReset = document.getElementById("btnReset");
+document.getElementById("btnReset").onclick = reset_cost();
+document.getElementById("btnCalcCost").onclick = TotalSurfaceArea();
 
 /*
 Create a function that calculates the surface area.
@@ -46,10 +45,20 @@ https://www.w3schools.com/js/js_functions.asp
 https://www.w3schools.com/jsref/jsref_isNaN.asp
 */
 
-function surfaceArea() {
+function TotalSurfaceArea() {
+	var surfaceArea = surfaceArea(); 
+        var length = length.value; 
+        var width = width.value;
+        var height = height.value;  
+}; 
 	var surfaceArea = (2*l*h + 2*w*h + w*l);
 	return total;
 	};
+if (isNaN(l) || isNaN(w) || isNaN(h)) {
+		alert("Invalid entry. Please enter a number!")
+	} else {
+		return ((2*(h*l))+(2*(w*l))+(2*(w*h)));
+}
 
 function calcGlueCost(d, w, h) {
 	total = (2 * d) + (2 * w) + (4 * h);
@@ -59,12 +68,6 @@ function calcGlueCost(d, w, h) {
 var calcSurface = calcSurfaceArea();
 var calcGlue = calcGlueCost();
 
-}; 
-
-var surfaceArea = surfaceArea(); 
-var length = length.value; 
-var width = width.value;
-var height = height.value;  
 }; 
 
 /*
@@ -81,7 +84,8 @@ https://www.javascript-coder.com/javascript-form/getelementbyid-form/
 function edgeLength() {
 	var edgeLength = (4*h + 4*w + 4*l); 
 	return total; 
-}; 
+}
+var edgeLength = edgeLength(); 
 
 /*
 create a function that stores the results of the previous functions
@@ -104,8 +108,7 @@ var width = document.getElementById("txtWidth").value;
 var height = document.getElementById("txtHeight").value;
 
 
-function finalCost  () {
-
+function finalCost() {
 	//glass 
 	if (height < 25) {
           surfaceCost = surface * glass6cm
@@ -115,9 +118,9 @@ function finalCost  () {
 		thickness = "4mm";
       }; 
 
-	var glueCost = calGlueCost(depth, width, height) * glue;
+	var glue = 10
 
-	var labourCost = surface / labour;
+	var labour = 60
 
 	var subtotal = surfaceCost + glueCost + labourCost;
 	
@@ -133,6 +136,8 @@ https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_innerhtml_de
 */
 
 btnReset.onclick = function() {
-	form.reset();
-	output.innerHTML = "";
-};
+	length.value = "";
+	width.value = "";
+	height.value = "";
+	tdCost = "";
+}; 
