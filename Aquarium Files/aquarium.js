@@ -45,28 +45,28 @@ https://www.w3schools.com/js/js_functions.asp
 https://www.w3schools.com/jsref/jsref_isNaN.asp
 */
 
-function TotalSurfaceArea() {
-	var surfaceArea = surfaceArea(); 
+function TotalSurfaceArea() { 
         var length = length.value; 
         var width = width.value;
         var height = height.value;  
-}; 
-	var surfaceArea = (2*l*h + 2*w*h + w*l);
-	return total;
-	};
-if (isNaN(l) || isNaN(w) || isNaN(h)) {
+
+if (isNaN(length) || isNaN(width) || isNaN(height)) {
 		alert("Access Denied :(. Please try again!")
 	} else {
-		return ((2*(h*l))+(2*(w*l))+(2*(w*h));
+		return ((2*(height*length))+(2*(width*length))+(2*(width*height));
+	}
 }
 
-function calcGlueCost(l, w, h) {
-	total = (2 * l) + (2 * w) + (4 * h);
-	return total;
+function edgeLength() {
+        var length = length.value; 
+        var width = width.value;
+        var height = height.value; 
+	
+	return (2 * length) + (2 * width) + (4 * height);
 };
 
 var calcSurface = calcSurfaceArea();
-var calcGlue = calcGlueCost();
+var edgeLength = edgeLength();
 
 }; 
 
@@ -80,12 +80,6 @@ At the beginning of your function get the value of each variable you
 created at the beginning of your program and store each value as a new variable.
 https://www.javascript-coder.com/javascript-form/getelementbyid-form/
 */
-
-function edgeLength() {
-	var edgeLength = (4*h + 4*w + 4*l); 
-	return total; 
-}
-var edgeLength = edgeLength(); 
 
 /*
 create a function that stores the results of the previous functions
@@ -101,31 +95,26 @@ You can use the URL below to help you do this:
 https://www.w3schools.com/jsref/jsref_tofixed.asp
 */
 
-btnCalcCost.onclick = function() {
-
-var length = document.getElementById("txtLength").value;
-var width = document.getElementById("txtWidth").value;
-var height = document.getElementById("txtHeight").value;
-
-
 function finalCost() {
-	
+	var price = price.value
+	var surfaceArea = surfaceArea();
+	var surfaceCost
 	if (height < 25) {
-          surfaceCost = surface * glass6cm
-		thickness = "6cm"; 
+          surfaceCost = surfaceArea * 0.06;
       } else {
-		surfaceCost = surface * glass4mm;
-		thickness = "4mm";
+		surfaceCost = surfaceArea * 0.1;
       }; 
 
-	var glue = 10
+	var glue = 10; 
 
-	var labour = 60
+	var labour = 60; 
 
-	var subtotal = surfaceCost + glueCost + labourCost;
+	var subtotal = surfaceCost + (glue*edgeLength) + (labour*TotalSurfaceArea);
+	
+	var gst = 0.1; 
 	
 	var total = (subtotal * gst).toFixed(2);
-
+	
 }; 
 
 /*
@@ -139,5 +128,5 @@ btnReset.onclick = function() {
 	length.value = "";
 	width.value = "";
 	height.value = "";
-	tdCost = "";
+	price.value = "";
 }; 
