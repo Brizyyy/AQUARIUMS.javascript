@@ -14,7 +14,7 @@ The following link will help you to do this:
 https://www.w3schools.com/jsref/met_document_getelementbyid.asp
 */
 
-var price = document.getElementById('tdCost);
+var price = document.getElementById('tdCost');
 
 /*
 select the "Calculate Cost" and "Reset" buttons by
@@ -28,7 +28,7 @@ https://www.w3schools.com/jsref/event_onclick.asp
 */
 
 document.getElementById("btnReset").onclick = reset();
-document.getElementById("btnCalcCost").onclick = CalCost();
+document.getElementById("btnCalcCost").onclick = CalcCost();
 
 /*
 Create a function that calculates the surface area.
@@ -60,8 +60,8 @@ if (isNaN(l) || isNaN(w) || isNaN(h)) {
 		return ((2*(h*l))+(2*(w*l))+(2*(w*h));
 }
 
-function calcGlueCost(d, w, h) {
-	total = (2 * d) + (2 * w) + (4 * h);
+function calcGlueCost(l, w, h) {
+	total = (2 * l) + (2 * w) + (4 * h);
 	return total;
 };
 
@@ -109,7 +109,7 @@ var height = document.getElementById("txtHeight").value;
 
 
 function finalCost() {
-	//glass 
+	
 	if (height < 25) {
           surfaceCost = surface * glass6cm
 		thickness = "6cm"; 
