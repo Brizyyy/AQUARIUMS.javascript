@@ -53,7 +53,7 @@ function TotalSurfaceArea() {
 if (isNaN(length) || isNaN(width) || isNaN(height)) {
 		alert("Access Denied :(. Please try again!")
 	} else {
-		return ((2*(height*length))+(2*(width*length))+(2*(width*height));
+		return ((2*(height * length))+(2*(width * length))+(2*(width * height));
 	}
 }
 
@@ -109,7 +109,7 @@ function finalCost() {
 
 	var labour = 60; 
 
-	var subtotal = surfaceCost + (glue*edgeLength) + (labour*TotalSurfaceArea);
+	var subtotal = surfaceCost + (glue * edgeLength) + (labour * TotalSurfaceArea);
 	
 	var gst = 0.1; 
 	
