@@ -63,7 +63,7 @@ function edgeLength() {
         var height = height.value; 
 	
 	return (2 * length) + (2 * width) + (4 * height);
-};
+}
 
 var calcSurface = calcSurfaceArea();
 var edgeLength = edgeLength();
@@ -103,7 +103,7 @@ function finalCost() {
           surfaceCost = surfaceArea * 0.06;
       } else {
 		surfaceCost = surfaceArea * 0.1;
-      }; 
+      } 
 
 	var glue = 10; 
 
