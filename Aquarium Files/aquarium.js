@@ -128,5 +128,5 @@ btnReset.onclick = function() {
 	length.value = "";
 	width.value = "";
 	height.value = "";
-	price.value = "";
+	price.value = ""; 
 }; 
