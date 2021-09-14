@@ -105,9 +105,9 @@ function finalCost() {
 		surfaceCost = surfaceArea * 0.1;
       } 
 
-	var glue = 10; 
+	var glue = 0.1; 
 
-	var labour = 60; 
+	var labour = 0.06; 
 
 	var subtotal = surfaceCost + (glue * edgeLength) + (labour * TotalSurfaceArea);
 	
