@@ -66,7 +66,7 @@ function edgeLength() {
 }
 
 var calcSurface = calcSurfaceArea();
-var edgeLength = edgeLength();
+var edgeLength = edgeLength(); 
 
 }; 
 
