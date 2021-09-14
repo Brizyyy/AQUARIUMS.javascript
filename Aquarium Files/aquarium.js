@@ -4,9 +4,9 @@ The following URL will help you to do this:
 https://www.javascript-coder.com/javascript-form/getelementbyid-form/
 */
 
-var length = document.getElementById('txtLength'); 
-var width = document.getElementById('txtWidth'); 
-var height = document.getElementById('txtHeight'); 
+var l = document.getElementById('txtLength'); 
+var w = document.getElementById('txtWidth'); 
+var h = document.getElementById('txtHeight'); 
 
 /*
 Also store the tdCost id element as a variable.
@@ -27,8 +27,8 @@ https://www.w3schools.com/js/js_htmldom_document.asp
 https://www.w3schools.com/jsref/event_onclick.asp
 */
 
-document.getElementById("btnReset").onclick = reset();
-document.getElementById("btnCalcCost").onclick = CalcCost();
+document.getElementById("btnReset").onclick = resetInputs;
+document.getElementById("btnCalcCost").onclick = CalcCost;
 
 /*
 Create a function that calculates the surface area.
@@ -46,9 +46,9 @@ https://www.w3schools.com/jsref/jsref_isNaN.asp
 */
 
 function TotalSurfaceArea() { 
-        var length = length.value; 
-        var width = width.value;
-        var height = height.value;  
+        var length = l.value; 
+        var width = w.value;
+        var height = h.value;  
 
 if (isNaN(length) || isNaN(width) || isNaN(height)) {
 		alert("Access Denied :(. Please try again!")
@@ -58,17 +58,12 @@ if (isNaN(length) || isNaN(width) || isNaN(height)) {
 }
 
 function edgeLength() {
-        var length = length.value; 
-        var width = width.value;
-        var height = height.value; 
+        var length = l.value; 
+        var width = w.value;
+        var height = h.value; 
 	
 	return (2 * length) + (2 * width) + (4 * height);
 }
-
-var calcSurface = calcSurfaceArea();
-var edgeLength = edgeLength(); 
-
-}; 
 
 /*
 Create a function that calculates the length of the edges
@@ -96,8 +91,14 @@ https://www.w3schools.com/jsref/jsref_tofixed.asp
 */
 
 function finalCost() {
-	var price = price.value
-	var surfaceArea = surfaceArea();
+	var surfaceArea = TotalSurfaceArea();
+	var edges = edgeLength();
+	
+	var length = new Number(l.value);
+	var width = new Number(w.value); 
+	var height = new Number(h.value); 
+	price.innerHTML = "";
+
 	var surfaceCost
 	if (height < 25) {
           surfaceCost = surfaceArea * 0.06;
@@ -107,13 +108,15 @@ function finalCost() {
 
 	var glue = 0.1; 
 
-	var labour = 0.06; 
+	var labour = 60/6000; 
 
-	var subtotal = surfaceCost + (glue * edgeLength) + (labour * TotalSurfaceArea);
+	var subtotal = surfaceCost + (glue * edges) + (labour * surfaceArea);
 	
 	var gst = 0.1; 
 	
 	var total = (subtotal * gst).toFixed(2);
+	
+	price.innerHTML = total;
 	
 }; 
 
@@ -123,10 +126,9 @@ Use this link to help https://www.w3schools.com/js/tryit.asp?filename=tryjs_form
 Also reset the output (tdCost). Use this link to help you do this
 https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_innerhtml_delete
 */
-
-btnReset.onclick = function() {
-	length.value = "";
-	width.value = "";
-	height.value = "";
-	price.value = ""; 
-}; 
+function resetInputs() {
+	l.value = "";
+	w.value = "";
+	h.value = "";
+	price.innerHTML = "";
+}
