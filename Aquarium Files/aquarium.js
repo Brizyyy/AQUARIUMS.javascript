@@ -114,7 +114,8 @@ function finalCost() {
 	
 	var gst = 0.1; 
 	
-	var total = (subtotal * gst).toFixed(2);
+	var total = (subtotal * gst)
+	var n = num.toFixed(2);
 	
 	price.innerHTML = total;
 	
