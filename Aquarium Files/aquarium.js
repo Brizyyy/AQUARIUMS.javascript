@@ -52,9 +52,9 @@ function TotalSurfaceArea() {
 
 if (isNaN(length) || isNaN(width) || isNaN(height)) {
 		alert("Access Denied :(. Please try again!")
-	} else {
-		return ((2*(height * length))+(2*(width * length))+(2*(width * height));
-	}
+} else {
+	return (2*(height*length))+(2*(width*length))+(2*(width*height));
+}
 }
 
 function edgeLength() {
@@ -114,8 +114,7 @@ function finalCost() {
 	
 	var gst = 0.1; 
 	
-	var total = (subtotal * gst)
-	var n = num.toFixed(2);
+	var total = (subtotal * gst).toFixed(2); 
 	
 	price.innerHTML = total;
 	
@@ -128,8 +127,8 @@ Also reset the output (tdCost). Use this link to help you do this
 https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_innerhtml_delete
 */
 function resetInputs() {
-	l.value = "";
-	w.value = "";
-	h.value = "";
-	price.innerHTML = "";
+    l.value = ' ';
+    w.value = ' ';
+    h.value = ' ';
+ 	price.innerHTML = ' ';
 }
