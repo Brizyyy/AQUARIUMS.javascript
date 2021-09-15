@@ -116,7 +116,7 @@ function finalCost() {
 	
 	var total = (subtotal * gst).toFixed(2); 
 	
-	price.innerHTML = total;
+	price.innerHTML = total; 
 	
 }; 
 
